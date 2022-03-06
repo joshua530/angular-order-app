@@ -4,14 +4,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import com.foods.angularwebapp.exceptions.AuthenticationException;
 import com.foods.angularwebapp.exceptions.InvalidRequestDataException;
 import com.foods.angularwebapp.models.Order;
 import com.foods.angularwebapp.models.Product;
 import com.foods.angularwebapp.models.User;
-import com.foods.angularwebapp.repositories.OrderRepository;
 import com.foods.angularwebapp.repositories.ProductRepository;
 import com.foods.angularwebapp.repositories.UserRepository;
 import com.foods.angularwebapp.security.Auth;
@@ -34,16 +32,14 @@ public class OrderController {
   private OrderService orderService;
   private UserRepository userRepository;
   private ProductRepository productRepository;
-  private OrderRepository orderRepository;
   private Auth authentication;
 
   @Autowired
   public OrderController(OrderService orderService, UserRepository userRepository, ProductRepository productRepository,
-      OrderRepository orderRepository, Auth authentication) {
+      Auth authentication) {
     this.orderService = orderService;
     this.userRepository = userRepository;
     this.productRepository = productRepository;
-    this.orderRepository = orderRepository;
     this.authentication = authentication;
   }
 

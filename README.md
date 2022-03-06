@@ -33,9 +33,3 @@ Authentication is done using JWT
 - /api/orders/:order-id - **Process an order**
 - /api/orders - **View all the orders**
 
-#### Admin details
-
-- username: john
-- password: password
-
-[View demo here](http://localhost:4200)

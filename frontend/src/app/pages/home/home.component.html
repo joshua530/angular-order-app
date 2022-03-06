@@ -1,0 +1,35 @@
+<div class="parent-container">
+  <div class="main container-flex">
+    <div *ngFor="let product of products" class="banner">
+      <a routerLink="{{ '/products/'+product.id }}">
+        <div class="main">
+          <img src="{{ product.imageUrl }}" alt="">
+        </div>
+        <div class="aside">
+          <p>Name: {{ product.name }}</p>
+          <p>Price: {{ product.price }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div>
+      <h2 class="text-underline mb-1">About us</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat
+        consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias
+        blanditiis ducimus soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat
+        consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias
+        blanditiis ducimus soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat
+        consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias
+        blanditiis ducimus soluta?
+      </p>
+    </div>
+  </div>
+</div>

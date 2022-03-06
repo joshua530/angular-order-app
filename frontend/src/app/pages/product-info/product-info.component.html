@@ -1,0 +1,32 @@
+<div class="parent-container">
+  <ng-container *ngIf="product">
+    <div class="main container-flex align-start mr-1 mb-1 col-3">
+      <div class="card">
+        <div class="wrapper">
+          <div class="head">
+            <img src="{{ product.imageUrl }}" alt="{{ product.name }}-image">
+          </div>
+          <div class="body">
+            <p>Price: {{ product.price }}</p>
+            <div>
+              <h3 class="text-underline">description</h3>
+              <p> {{ product.description }}</p>
+            </div>
+          </div>
+        </div>
+        <app-place-order-form [productId]="product.id"></app-place-order-form>
+      </div>
+    </div>
+    <div class="sidebar col-2">
+      <div>
+        <h2 class="text-underline">Nutritional information</h2>
+        <p>
+          {{ product.nutritionInfo }}
+        </p>
+      </div>
+    </div>
+  </ng-container>
+  <h2 *ngIf="!product">
+    Error: Requested product not found
+  </h2>
+</div>

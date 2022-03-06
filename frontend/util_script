@@ -1,0 +1,4 @@
+#!/bin/sh
+
+gnome-terminal -- npm run start &&
+gnome-terminal  -- php -S localhost:3000 -t $HOME/Assets/public

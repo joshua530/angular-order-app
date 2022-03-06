@@ -1,0 +1,154 @@
+{
+  "products": [
+    {
+      "name": "Mango steen",
+      "price": 12.22,
+      "imageUrl": "http://localhost:2000/static/images/food.jpg",
+      "description": "Delicious mango steen",
+      "id": 1,
+      "nutritionalInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias blanditiis ducimus soluta?"
+    },
+    {
+      "name": "Chicken",
+      "price": 12.22,
+      "imageUrl": "http://localhost:2000/static/images/food.jpg",
+      "description": "Grilled chicken",
+      "id": 2,
+      "nutritionalInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias blanditiis ducimus soluta?"
+    },
+    {
+      "name": "Pizza",
+      "price": 12.22,
+      "imageUrl": "http://localhost:2000/static/images/food.jpg",
+      "description": "Grilled pizza",
+      "id": 3,
+      "nutritionalInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias blanditiis ducimus soluta?"
+    },
+    {
+      "name": "Chips",
+      "price": 12.22,
+      "imageUrl": "http://localhost:2000/static/images/food.jpg",
+      "description": "Delicious chips",
+      "id": 4,
+      "nutritionalInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias blanditiis ducimus soluta?"
+    },
+    {
+      "name": "Roasted ribs",
+      "price": 20.22,
+      "imageUrl": "http://localhost:2000/static/images/food.jpg",
+      "description": "Delicious mango steen",
+      "id": 5,
+      "nutritionalInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias blanditiis ducimus soluta?"
+    },
+    {
+      "name": "Milk shake",
+      "price": 10,
+      "imageUrl": "http://localhost:2000/static/images/food.jpg",
+      "description": "Grilled chicken",
+      "id": 6,
+      "nutritionalInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias blanditiis ducimus soluta?"
+    },
+    {
+      "name": "Fruit salad",
+      "price": 23.22,
+      "imageUrl": "http://localhost:2000/static/images/food.jpg",
+      "description": "Grilled pizza",
+      "id": 7,
+      "nutritionalInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias blanditiis ducimus soluta?"
+    },
+    {
+      "name": "Rice",
+      "price": 7.84,
+      "imageUrl": "http://localhost:2000/static/images/food.jpg",
+      "description": "Delicious chips",
+      "id": 8,
+      "nutritionalInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias blanditiis ducimus soluta?"
+    }
+  ],
+  "orders": [
+    {
+      "time": "23 Feb 2022 9:44 PM",
+      "quantity": 1,
+      "status": "processing",
+      "product": "Chips",
+      "id": "e36d8f3b-5e20-4ec1-8027-bced286915ad"
+    },
+    {
+      "id": "336cd096-dc20-4cdd-8c92-fa3501de586e",
+      "orders": []
+    },
+    {
+      "id": "fabd4932-a8fb-4052-9467-7b65c0339cdf",
+      "orders": []
+    },
+    {
+      "id": "c3b50fe5-22db-43a5-b4bf-40afba7f943c",
+      "orders": []
+    },
+    {
+      "id": "53a2f873-dd30-4c11-968e-c0f9cde3c2f8",
+      "orders": [
+        {
+          "product": "Mango steen",
+          "quantity": 39,
+          "status": "pending",
+          "time": "2 Mar 2022 02:23 PM",
+          "id": "82f2a8de-624d-424d-9a3e-9c0ac423ac49"
+        },
+        {
+          "product": "Mango steen",
+          "quantity": 29,
+          "status": "pending",
+          "time": "2 Mar 2022 02:23 PM",
+          "id": "db6757b4-01da-467f-bd15-2ffdc146e3bf"
+        },
+        {
+          "product": "Mango steen",
+          "quantity": 19,
+          "status": "pending",
+          "time": "2 Mar 2022 02:23 PM",
+          "id": "033ce5a7-4766-42d9-9dec-21a415712f73"
+        },
+        {
+          "product": "Mango steen",
+          "quantity": 9,
+          "status": "pending",
+          "time": "2 Mar 2022 02:23 PM",
+          "id": "93747108-6899-449f-b9ac-10630bb2d8bb"
+        }
+      ]
+    },
+    {
+      "id": "fc5e750b-8a37-4d83-a8d2-3c6b16ecde65",
+      "orders": [
+        {
+          "product": "Milk shake",
+          "quantity": 5,
+          "status": "pending",
+          "time": "3 Mar 2022 02:14 PM",
+          "id": "a6dfc577-0e11-466b-b88f-6eb14dfe626f"
+        },
+        {
+          "product": "Mango steen",
+          "quantity": 6,
+          "status": "pending",
+          "time": "3 Mar 2022 02:13 PM",
+          "id": "8f9a33ec-dc90-44c0-8ffd-1917498c2d82"
+        },
+        {
+          "product": "Mango steen",
+          "quantity": 9,
+          "status": "pending",
+          "time": "2 Mar 2022 02:26 PM",
+          "id": "1c1fd808-5c96-4a02-82e6-9e9ac62c10d9"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "password": "lksjfaksdfl434jkjl"
+    }
+  ]
+}

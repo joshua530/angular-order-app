@@ -1,0 +1,14 @@
+<form (ngSubmit)="authenticateAdmin()" class="login-form ">
+  <h2 class="mt-2 mb-2">Login to continue</h2>
+  <div class="form-control">
+    <label for="username">Username</label>
+    <input [(ngModel)]="username" type="text" name="username" id="">
+  </div>
+  <div class="form-control">
+    <label for="password">Password</label>
+    <input [(ngModel)]="password" type="password" name="password" id="">
+  </div>
+  <div class="form-control">
+    <input class="btn btn-green" type="submit" value="Login">
+  </div>
+</form>

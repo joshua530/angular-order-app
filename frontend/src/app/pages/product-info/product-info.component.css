@@ -1,0 +1,46 @@
+.card {
+  border: 1px solid #e2e2e2;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .wrapper {
+  display: flex;
+}
+
+.card img {
+  max-width: 180px;
+}
+
+.card .head {
+  margin-right: 0.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0.5em 0;
+}
+
+@media screen and (max-width: 560px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card .head {
+    margin-bottom: 0.5em;
+    margin-right: 0;
+  }
+
+  .card img {
+    max-width: 300px;
+  }
+}

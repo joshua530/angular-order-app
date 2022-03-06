@@ -1,0 +1,5 @@
+<form (ngSubmit)="orderMeal()">
+  <label for="quantity">Quantity</label>
+  <input [(ngModel)]="quantity" type="number" name="quantity" min="1" max="1000" id="quantity">
+  <button class="btn btn-green">Order</button>
+</form>

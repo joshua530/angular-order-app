@@ -1,0 +1,30 @@
+<div class="order-list">
+  <table *ngIf="orders.length > 0">
+    <thead>
+      <td>Time</td>
+      <td>Quantity</td>
+      <td>Product</td>
+      <td>Status</td>
+      <td></td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.timePlaced }}</td>
+        <td>{{ order.productQuantity }}</td>
+        <td>{{ order.product?.name }}</td>
+        <td>{{ order.status }}</td>
+        <td>
+          <button *ngIf="order.status !== ORDER_STATUS.DELIVERED"
+            [ngClass]="{'btn-green': order.status===ORDER_STATUS.PENDING, 'btn-orange': order.status===ORDER_STATUS.PROCESSING}"
+            (click)="processOrder(order.id || -1, order.status)" class="btn">
+            PROCESS
+          </button>
+          <button *ngIf="order.status === ORDER_STATUS.DELIVERED" class="btn btn-inactive">
+            DELIVERED
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="orders.length < 1">There are currently no orders to display</p>
+</div>

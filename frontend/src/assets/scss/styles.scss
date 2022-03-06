@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(54, 54, 54);
+  font-weight: 400;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+}
+
+img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+
+input {
+  outline: none;
+}
+
+.container {
+  margin: 1em 1.5em;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  max-width: 200px;
+  border: 1px solid green;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+/* orders */
+.align-start {
+  align-items: flex-start;
+}
+
+.mr-1 {
+  margin-right: 1em;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+/* end orders */
+
+/** alerts **/
+.alerts-container {
+  position: absolute;
+  width: 40%;
+  top: 1em;
+  left: 30%;
+}
+
+.alert {
+  background: #aaa8a8;
+  color: #000;
+  border: 1px solid #fefefe;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.close-alert {
+  color: red;
+  display: block;
+  cursor: pointer;
+}
+
+.alert-success {
+  background: #e0ffb0;
+  color: green;
+  border-color: green;
+}
+
+.alert-success .close-alert {
+  color: green;
+}
+
+.alert-info {
+  background: skyblue;
+  color: blue;
+  border-color: blue;
+}
+
+.alert-info .close-alert {
+  color: blue;
+}
+
+.alert-warning {
+  background: #ffffcf;
+  color: orange;
+  border-color: orange;
+}
+
+.alert-warning .close-alert {
+  color: orange;
+}
+
+.alert-danger {
+  background: #fff1eb;
+  color: red;
+  border-color: red;
+}
+
+.alert-danger .close-alert {
+  color: red;
+}
+
+.current-route {
+  text-decoration: underline;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.align-center {
+  align-content: center !important;
+}
+
+/** end alerts **/
+
+.order-list {
+  width: 100%;
+}
+
+@media screen and (min-width: 490px) {
+  .container-flex {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .container-flex {
+    justify-content: center;
+  }
+
+  .parent-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .banner {
+    .main {
+      width: 100%;
+    }
+  }
+
+  @each $col in (1, 2, 3, 4, 5) {
+    .col-#{$col} {
+      width: $col * 20%;
+    }
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .container-flex {
+    justify-content: flex-start;
+    margin-left: 5%;
+  }
+}
+
+@import "utils";
+@import "nav";
+@import "footer";
+@import "home";
+@import "table";
+@import "alerts";
+@import "login-form";

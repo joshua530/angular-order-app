@@ -60,13 +60,13 @@
 // Product food = new Product(
 // "Food",
 // 12.23, "Delicious food",
-// "http://localhost:3000/images/food.jpg",
+// "/images/food.jpg",
 // "Contains vitamins A,C and D");
 
 // Product pancakes = new Product(
 // "Pancakes",
 // 20.11, "Pancakes covered with honey",
-// "http://localhost:3000/images/food6.jpg",
+// "/images/food6.jpg",
 
 // "Rich in vitamins. Perfect way to start your day"
 
@@ -74,14 +74,14 @@
 // Product mixedSalad = new Product(
 // "Mixed salad", 32.16,
 // "Salad composed of different fruits and vegetables",
-// "http://localhost:3000/images/food5.jpg",
+// "/images/food5.jpg",
 
 // "All manner of vitamins, ranging from A to E are to be found here"
 
 // );
 // Product sandwich = new Product(
 // "Bacon sandwich", 18.45, "Delicious bacon sandwich",
-// "http://localhost:3000/images/food4.jpg",
+// "/images/food4.jpg",
 
 // "Crunchy with a touch of healthy vegetables. A good snack to grab when" +
 // " in need of a meal"
@@ -89,7 +89,7 @@
 // );
 // Product sausages = new Product(
 // "Sausages", 22.89, "Golden brown barbecued sausages",
-// "http://localhost:3000/images/food7.jpg",
+// "/images/food7.jpg",
 
 // "A rich source of proteins. Ideal for people working towards gaining body" +
 // "mass"
@@ -98,10 +98,10 @@
 // Product rice = new Product(
 // "Beef steak with rice and broccoli", 44.38, "Scrumptious meal. The picture" +
 // "tells it all",
-// "http://localhost:3000/images/food2.jpg",
+// "/images/food2.jpg",
 
-// "Contains all the three major nutrients. A heavy meal that will come in
-// handy" +
+// "Contains all the three major nutrients. A heavy meal that will come in" +
+// "handy" +
 // " anytime you feel hungry"
 
 // );
@@ -110,7 +110,7 @@
 // "Boiled eggs accompanied with a fruit and vegetable mixture, sprinkled with"
 // +
 // "black pepper",
-// "http://localhost:3000/images/food3.jpg",
+// "/images/food3.jpg",
 
 // "Contains proteins, vitamins and essential minerals. Don\"t forget the black"
 // +

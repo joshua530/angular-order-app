@@ -86,7 +86,7 @@ public class DbConfig {
                         String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id nulla sit amet nulla dictum placerat. Vivamus lacinia ornare vehicula. Ut consectetur massa justo. Sed non fermentum eros, sit amet pulvinar lacus. Donec facilisis aliquam condimentum. Ut et venenatis sapien, vel ornare neque. Suspendisse sit amet egestas erat, quis tempus nisl.";
                         String nutritionInfo = "In eget porta nulla. Sed dignissim neque leo, nec accumsan quam accumsan vel. Sed condimentum congue eros. Suspendisse sagittis risus ligula, nec semper ante imperdiet suscipit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras blandit, massa id vulputate fermentum, erat tellus rhoncus justo, et facilisis tellus eros id nisl. Suspendisse fringilla sem ut tortor sagittis viverra. Etiam convallis vitae felis nec congue.";
 
-                        String staticUrl = "http://localhost/static";
+                        String staticUrl = "/static";
 
                         // featured
                         Product pizza = new Product(

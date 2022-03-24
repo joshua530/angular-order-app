@@ -1,0 +1,6 @@
+#!/bin/bash
+
+bash -c 'cd ~/Tmp/angular/angular-crash/frontend &&
+npm run build &&
+cp ~/Tmp/angular/angular-crash/frontend/dist/angular-crash/* ~/Tmp/angular/angular-crash/backend/src/main/resources/static &&
+cp -r ~/Assets/public/images ~/Tmp/angular/angular-crash/backend/src/main/resources/static'

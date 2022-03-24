@@ -1,8 +1,6 @@
-<nav>
-  <div class="branding">
-    <a routerLink="/">Meals.com</a>
-  </div>
-  <div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light ps-md-2 pe-md-5 py-4 mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand text-uppercase" routerLink="/">Orders.com</a>
     <a *ngIf="(!isAdminPage)" routerLinkActive="current-route" routerLink="/orders">my orders</a>
     <button class="btn btn-green" *ngIf="isAdminPage && isLoggedIn" (click)="logoutAdmin()">Logout</button>
   </div>

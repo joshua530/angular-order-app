@@ -24,6 +24,14 @@ export class PlaceOrderFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  incrementQuantity() {
+    if (this.quantity < 1000) ++this.quantity;
+  }
+
+  decrementQuantity() {
+    if (this.quantity > 1) --this.quantity;
+  }
+
   orderMeal(): void {
     // validate
     if (this.quantity > 1000) {

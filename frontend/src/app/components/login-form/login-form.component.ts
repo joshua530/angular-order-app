@@ -33,6 +33,7 @@ export class LoginFormComponent implements OnInit {
     this.userService
       .authenticateUser(this.username, this.password)
       .subscribe((authToken) => {
+        console.log('did something');
         if (authToken.token === null)
           this.notificationService.notify(
             'Invalid username or password',

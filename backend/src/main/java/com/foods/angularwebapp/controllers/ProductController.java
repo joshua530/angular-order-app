@@ -1,6 +1,9 @@
 package com.foods.angularwebapp.controllers;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.foods.angularwebapp.models.Product;
 import com.foods.angularwebapp.services.ProductService;
@@ -22,8 +25,27 @@ public class ProductController {
   }
 
   @GetMapping
-  public List<Product> getAllProducts() {
-    return this.service.getAllProducts();
+  public Map<String, List<Product>> getAllProducts() {
+    List<Product> products = this.service.getAllProducts();
+    Map<String, List<Product>> categorized = new HashMap<>();
+    List<Product> featured = new ArrayList<Product>();
+    List<Product> hotDeals = new ArrayList<Product>();
+    List<Product> others = new ArrayList<Product>();
+
+    products.forEach(p -> {
+      if (p.getIsFeatured())
+        featured.add(p);
+      else if (p.getIsHotDeal())
+        hotDeals.add(p);
+      else
+        others.add(p);
+    });
+
+    categorized.put("featured", featured);
+    categorized.put("hotDeals", hotDeals);
+    categorized.put("others", others);
+
+    return categorized;
   }
 
   @GetMapping(path = "{product-id}")

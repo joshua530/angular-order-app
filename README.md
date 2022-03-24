@@ -11,3 +11,8 @@ It uses an angular js frontend and a spring boot backend.
 Database used at the backend is mysql.
 The frontend uses a rest api to access the backend.
 Authentication is done using JWT
+
+### Default admin user
+
+- username: john
+- password: password

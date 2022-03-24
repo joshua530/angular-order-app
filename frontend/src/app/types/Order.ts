@@ -1,7 +1,7 @@
 import Product from './Product';
 
 export enum OrderStatus {
-  PENDING = ' PENDING',
+  PENDING = 'PENDING',
   PROCESSING = 'PROCESSING',
   DELIVERED = 'DELIVERED',
 }

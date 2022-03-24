@@ -1,32 +1,31 @@
-<div class="parent-container">
-  <ng-container *ngIf="product">
-    <div class="main container-flex align-start mr-1 mb-1 col-3">
-      <div class="card">
-        <div class="wrapper">
-          <div class="head">
-            <img src="{{ product.imageUrl }}" alt="{{ product.name }}-image">
-          </div>
-          <div class="body">
-            <p>Price: {{ product.price }}</p>
-            <div>
-              <h3 class="text-underline">description</h3>
-              <p> {{ product.description }}</p>
-            </div>
-          </div>
-        </div>
+<div class="row" *ngIf="product; else elseBlock">
+  <div class="col-12 col-sm-9 col-lg-5">
+    <div class="row row-cols-1">
+      <div class="col mt-3">
+        <h2 class="d-lg-none font-light h1">{{ product.name }}</h2>
+        <img class="img-fluid rounded" src="{{ product.imageUrl }}" alt="{{ product.name }}-image">
+      </div>
+      <div class="col">
+        <p class="font-light-0 h3 mt-2">${{ product.price }}</p>
         <app-place-order-form [productId]="product.id"></app-place-order-form>
       </div>
     </div>
-    <div class="sidebar col-2">
-      <div>
-        <h2 class="text-underline">Nutritional information</h2>
-        <p>
-          {{ product.nutritionInfo }}
-        </p>
-      </div>
-    </div>
-  </ng-container>
-  <h2 *ngIf="!product">
-    Error: Requested product not found
-  </h2>
+  </div>
+  <div class="col-lg-1"></div>
+  <div class="col-12 col-sm-9 col-lg-6 mt-3">
+    <h2 class="d-none d-lg-block font-light h1">{{ product.name }}</h2>
+    <h2 class="font-light-0">Description</h2>
+    <p class="border font-light p-1">
+      {{ product.description }}
+    </p>
+    <h2 class="font-light-0 mt-4">Nutritional information</h2>
+    <p class="font-light border p-1">
+      {{ product.nutritionInfo }}
+    </p>
+  </div>
 </div>
+<ng-template #elseBlock>
+  <p>
+    <i class="fa fa-spinner fa-spin fa-2x fa-pulse"></i>
+  </p>
+</ng-template>

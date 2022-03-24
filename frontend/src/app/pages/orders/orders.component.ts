@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OrderService } from 'src/app/services/order.service';
 import { Order } from 'src/app/types/Order';
 import { UserService } from 'src/app/services/user.service';
+import { OrderStatus } from '../../types/Order';
 
 @Component({
   selector: 'app-orders',
@@ -11,6 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class OrdersComponent implements OnInit {
   orders: Order[];
   recommendedOrders: Order[];
+  ORDER_STATUS = OrderStatus;
 
   constructor(
     private orderService: OrderService,

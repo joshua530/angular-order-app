@@ -1,35 +1,84 @@
-<div class="parent-container">
-  <div class="main container-flex">
-    <div *ngFor="let product of products" class="banner">
-      <a routerLink="{{ '/products/'+product.id }}">
-        <div class="main">
-          <img src="{{ product.imageUrl }}" alt="">
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col py-3">
+    <h2 class="font-light-0">Featured</h2>
+    <div class="py-2 px-sm-0 row col row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+      <ng-container *ngIf="products && products.featured.length > 0; else elseBlock">
+        <!-- featured products -->
+        <div *ngFor="let product of products.featured" class="product col">
+          <a routerLink="{{ '/products/'+product.id }}">
+            <img class="product-image" src="{{ product.imageUrl }}" alt="image">
+            <div class="product-info mt-2">
+              <span class="info font-light">Name: {{ product.name }}</span>
+              <span class="info font-light">Price: ${{ product.price }}</span>
+            </div>
+          </a>
         </div>
-        <div class="aside">
-          <p>Name: {{ product.name }}</p>
-          <p>Price: {{ product.price }}</p>
+      </ng-container>
+    </div>
+    <ng-template #elseBlock>
+      <div>
+        <i class="fa-duotone fa fa-spin fa-spinner fa-2x fa-pulse"></i>
+      </div>
+    </ng-template>
+  </div>
+  <div class="col py-3">
+    <h2 class="font-light-0">Hot deals</h2>
+    <!-- hot deal products -->
+    <ng-container *ngIf="products && products.hotDeals.length > 0; else elseBlock">
+      <div class="px-sm-0 row col row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <div *ngFor="let product of products.hotDeals" class="product col">
+          <a routerLink="{{ '/products/'+product.id }}">
+            <img class="product-image" src="{{ product.imageUrl }}" alt="image">
+            <div class="product-info mt-2">
+              <span class="info font-light">Name: {{ product.name }}</span>
+              <span class="info font-light">Price: ${{ product.price }}</span>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
+      </div>
+    </ng-container>
+    <ng-template #elseBlock>
+      <div>
+        <i class="fa-duotone fa fa-spinner fa-spin fa-2x fa-pulse"></i>
+      </div>
+    </ng-template>
   </div>
-  <div class="sidebar">
-    <div>
-      <h2 class="text-underline mb-1">About us</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat
-        consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias
-        blanditiis ducimus soluta?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat
-        consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias
-        blanditiis ducimus soluta?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas, voluptatibus illum ad quaerat
-        consectetur rerum natus reprehenderit neque corrupti ab minus, aliquam expedita repellat nulla molestias
-        blanditiis ducimus soluta?
-      </p>
-    </div>
+</div>
+<div class="col py-3">
+  <h2 class="font-light-0">Order Now</h2>
+  <!-- order now products -->
+  <div class="px-sm-0 row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    <ng-container *ngIf="products && products.others.length > 0; else elseBlock">
+      <div *ngFor="let product of products.others" class="product col">
+        <a routerLink="{{ '/products/'+product.id }}">
+          <img class="product-image" src="{{ product.imageUrl }}" alt="image">
+          <div class="product-info mt-2">
+            <span class="info font-light">Name: {{ product.name }}</span>
+            <span class="info font-light">Price: ${{ product.price }}</span>
+          </div>
+        </a>
+      </div>
+    </ng-container>
+    <ng-template #elseBlock>
+      <div>
+        <i class="fa fa-spinner fa-2x fa-duotone fa-pulse"></i>
+      </div>
+    </ng-template>
   </div>
+</div>
+<div class="pt-3">
+  <h2 class="font-light-0">About us</h2>
+  <p class="font-light">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quasi consectetur culpa in, tempore aliquid dicta
+    magni, error magnam expedita repellat eveniet. Ducimus perferendis, velit fugiat fuga corporis sed hic.
+  </p>
+  <p class="font-light">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis molestias veritatis ullam vitae doloribus
+    quos assumenda quaerat mollitia quia illum. Alias, eaque suscipit quos repellat est officiis quaerat totam
+    corporis?
+  </p>
+  <p class="font-light">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur natus perspiciatis, ex ducimus quo itaque!
+    Laudantium assumenda tempore iusto nisi quisquam eveniet nobis harum, dolorem minima fugiat modi. Officiis, ut!
+  </p>
 </div>

@@ -1,27 +1,33 @@
-<div class="order-list">
-  <table *ngIf="orders.length > 0">
+<div>
+  <table class="table">
     <thead>
-      <td>Time</td>
-      <td>Quantity</td>
-      <td>Product</td>
-      <td>Status</td>
-      <td></td>
+      <tr>
+        <th scope="col" class="text-uppercase font-light-0">Time</th>
+        <th scope="col" class="text-uppercase font-light-0">Quantity</th>
+        <th scope="col" class="text-uppercase font-light-0">Product</th>
+        <th scope="col" class="text-uppercase font-light-0">Status</th>
+        <th scope="col" class="text-uppercase font-light-0"></th>
+      </tr>
     </thead>
     <tbody>
       <tr *ngFor="let order of orders">
-        <td>{{ order.timePlaced }}</td>
-        <td>{{ order.productQuantity }}</td>
-        <td>{{ order.product?.name }}</td>
-        <td>{{ order.status }}</td>
+        <td class="font-light">{{ order.timePlaced }}</td>
+        <td class="font-light">{{ order.productQuantity }}</td>
+        <td class="font-light">{{ order.product?.name }}</td>
+        <td class="font-light"
+          [ngClass]="{'text-success': order.status===ORDER_STATUS.DELIVERED, 'text-warning': order.status===ORDER_STATUS.PROCESSING, 'text-danger': order.status===ORDER_STATUS.PENDING}">
+          {{ order.status }}</td>
         <td>
-          <button *ngIf="order.status !== ORDER_STATUS.DELIVERED"
+          <button *ngIf="order.status !== ORDER_STATUS.DELIVERED; else elseBlock"
             [ngClass]="{'btn-green': order.status===ORDER_STATUS.PENDING, 'btn-orange': order.status===ORDER_STATUS.PROCESSING}"
             (click)="processOrder(order.id || -1, order.status)" class="btn">
             PROCESS
           </button>
-          <button *ngIf="order.status === ORDER_STATUS.DELIVERED" class="btn btn-inactive">
-            DELIVERED
-          </button>
+          <ng-template #elseBlock>
+            <button disabled class="btn btn-inactive">
+              DELIVERED
+            </button>
+          </ng-template>
         </td>
       </tr>
     </tbody>

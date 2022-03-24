@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import Product from '../types/Product';
+import Product, { CategorizedProducts } from '../types/Product';
 import { Observable, Subject, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root',
 })
 export class ProductService {
-  products: Product[];
+  products: CategorizedProducts;
   private subject: Subject<Product[]> = new Subject();
   private endPoint = environment.baseUri + '/products';
 
@@ -18,8 +18,8 @@ export class ProductService {
     return this.subject.asObservable();
   }
 
-  fetchProducts(): Observable<Product[]> {
-    const observable = this.http.get<Product[]>(this.endPoint);
+  fetchProducts(): Observable<CategorizedProducts> {
+    const observable = this.http.get<CategorizedProducts>(this.endPoint);
     observable.subscribe((prods) => (this.products = prods));
     return observable;
   }

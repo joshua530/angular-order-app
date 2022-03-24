@@ -21,22 +21,29 @@ public class Product {
   private String name;
   @Column(nullable = false)
   private double price;
-  @Column(nullable = false)
+  @Column(nullable = false, length = 500)
   private String description;
   @Column(nullable = false)
   private String imageUrl;
-  @Column(nullable = false)
+  @Column(nullable = false, length = 500)
   private String nutritionInfo;
+  @Column(columnDefinition = "boolean default false")
+  private Boolean isFeatured;
+  @Column(columnDefinition = "boolean default false")
+  private Boolean isHotDeal;
 
-  public Product() {
-  }
-
-  public Product(String name, double price, String description, String imageUrl, String nutritionInfo) {
+  public Product(String name, double price, String description, String imageUrl, String nutritionInfo,
+      Boolean isFeatured, Boolean isHotDeal) {
     this.name = name;
     this.price = price;
     this.description = description;
     this.imageUrl = imageUrl;
     this.nutritionInfo = nutritionInfo;
+    this.isFeatured = isFeatured;
+    this.isHotDeal = isHotDeal;
+  }
+
+  public Product() {
   }
 
   public int getId() {
@@ -85,5 +92,21 @@ public class Product {
 
   public void setNutritionInfo(String nutritionInfo) {
     this.nutritionInfo = nutritionInfo;
+  }
+
+  public Boolean getIsFeatured() {
+    return isFeatured;
+  }
+
+  public void setIsFeatured(Boolean isFeatured) {
+    this.isFeatured = isFeatured;
+  }
+
+  public Boolean getIsHotDeal() {
+    return isHotDeal;
+  }
+
+  public void setIsHotDeal(Boolean isHotDeal) {
+    this.isHotDeal = isHotDeal;
   }
 }

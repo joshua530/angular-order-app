@@ -7,4 +7,10 @@ interface Product {
   nutritionInfo: string;
 }
 
+export interface CategorizedProducts {
+  featured: Product[];
+  hotDeals: Product[];
+  others: Product[];
+}
+
 export default Product;

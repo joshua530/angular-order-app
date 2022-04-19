@@ -29,7 +29,8 @@ It has two types of users
 ##### Customer
 Can view products offered, place orders and view placed orders
 ##### Administrator
-Performs processing of orders
+Performs processing of orders\
+Admin login credentials can be found in [auth.txt](auth.txt)
 
 ## Usage
 ##### Prerequisites

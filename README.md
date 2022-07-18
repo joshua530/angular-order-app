@@ -9,8 +9,6 @@
 - [Technologies](#technologies)
 
 ## Previews
-> [Click here](http://ec2-54-147-218-130.compute-1.amazonaws.com/) for live demo
->
 > **home page**
 > ![home page](home.png)
 >
